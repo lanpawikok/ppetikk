@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Pribadi - Web Developer & Programmer">
+    <title>Portofolio | Muhamad Maulana</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-text">Portofolio</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Beranda</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Tentang</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Keahlian</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#education" class="nav__link">Pendidikan</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Proyek</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Kontak</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content">
+                    <span class="home__subtitle">Halo, Saya</span>
+                    <h1 class="home__title">Muhamad Maulana</h1>
+                    <h3 class="home__profession">Web Developer & Programmer</h3>
+                    <p class="home__description">
+                        Mahasiswa passionate dalam pengembangan web modern. 
+                        Spesialisasi dalam HTML, CSS, JavaScript, Python, React, dan Database Management.
+                    </p>
+                    <div class="home__buttons">
+                        <a href="#contact" class="button button--flex">
+                            Hubungi Saya <i class="fas fa-paper-plane button__icon"></i>
+                        </a>
+                        <a href="#projects" class="button button--ghost">
+                            Lihat Karya
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="home__img">
+                    <div class="home__blob">
+                        <!-- Ganti dengan foto profil Anda -->
+                        <img src="https://i1.sndcdn.com/artworks-iFrzoDKmRzrL0Jf6-SVY0pg-t500x500.jpg" alt="Foto Profil" class="home__blob-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button button--flex">
+                    <span class="home__scroll-mouse">
+                        <span class="home__scroll-wheel"></span>
+                    </span>
+                    <span class="home__scroll-name">Scroll ke bawah</span>
+                    <i class="fas fa-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <h2 class="section__title">Tentang Saya</h2>
+            <span class="section__subtitle">Perkenalan Singkat</span>
+
+            <div class="about__container container grid">
+                <img src="img/DSC00139.jpeg" alt="Tentang Saya" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">
+                        Saya adalah seorang developer yang antusias dengan teknologi web modern. 
+                        Memiliki pengalaman dalam membangun aplikasi web responsif menggunakan 
+                        HTML, CSS, JavaScript, dan framework modern seperti React. 
+                        Familiar dengan database SQL dan MySQL untuk manajemen data yang efisien.
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">3+</span>
+                            <span class="about__info-name">Tahun<br>Pengalaman</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">15+</span>
+                            <span class="about__info-name">Proyek<br>Selesai</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">24/7</span>
+                            <span class="about__info-name">Support<br>Online</span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a download href="#" class="button button--flex">
+                            Download CV <i class="fas fa-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Keahlian Teknis</h2>
+            <span class="section__subtitle">Teknologi yang dikuasai</span>
+
+            <div class="skills__container container grid">
+                <!-- Skill Category 1: Frontend -->
+                <div class="skills__content skills__open">
+                    <div class="skills__header">
+                        <i class="fas fa-code skills__icon"></i>
+                        <div>
+                            <h3 class="skills__title">Frontend Development</h3>
+                            <span class="skills__subtitle">Lebih dari 2 tahun</span>
+                        </div>
+                        <i class="fas fa-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fab fa-html5"></i> HTML5</h4>
+                                <span class="skills__number">95%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fab fa-css3-alt"></i> CSS3</h4>
+                                <span class="skills__number">90%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fab fa-js"></i> JavaScript</h4>
+                                <span class="skills__number">85%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fab fa-react"></i> React.js</h4>
+                                <span class="skills__number">80%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: Backend & Database -->
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="fas fa-server skills__icon"></i>
+                        <div>
+                            <h3 class="skills__title">Backend & Database</h3>
+                            <span class="skills__subtitle">Lebih dari 1 tahun</span>
+                        </div>
+                        <i class="fas fa-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fab fa-python"></i> Python</h4>
+                                <span class="skills__number">85%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fas fa-database"></i> SQL</h4>
+                                <span class="skills__number">80%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fas fa-database"></i> MySQL</h4>
+                                <span class="skills__number">85%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Soft Skills -->
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="fas fa-users skills__icon"></i>
+                        <div>
+                            <h3 class="skills__title">Soft Skills</h3>
+                            <span class="skills__subtitle">Professional Skills</span>
+                        </div>
+                        <i class="fas fa-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fas fa-comments"></i> Komunikasi</h4>
+                                <span class="skills__number">90%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fas fa-users-cog"></i> Kerja Tim</h4>
+                                <span class="skills__number">95%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h4 class="skills__name"><i class="fas fa-lightbulb"></i> Problem Solving</h4>
+                                <span class="skills__number">85%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <div class="skills__percentage" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education section" id="education">
+            <h2 class="section__title">Riwayat Pendidikan</h2>
+            <span class="section__subtitle">Perjalanan Akademik</span>
+
+            <div class="education__container container">
+                <div class="education__tabs">
+                    <div class="education__button button--flex education__active" data-target='#school'>
+                        <i class="fas fa-graduation-cap education__icon"></i>
+                        Pendidikan Formal
+                    </div>
+                    <div class="education__button button--flex" data-target='#course'>
+                        <i class="fas fa-certificate education__icon"></i>
+                        Sertifikasi
+                    </div>
+                </div>
+
+                <div class="education__sections">
+                    <!-- Education Content 1 -->
+                    <div class="education__content education__active" data-content id="school">
+                        <!-- Timeline Item 1 -->
+                        <div class="education__data">
+                            <div>
+                                <h3 class="education__title">Pelajar Jurusan Informatika</h3>
+                                <span class="education__subtitle">WIKRAMA</span>
+                                <div class="education__calendar">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2024 - Sekarang
+                                </div>
+                            </div>
+                            <div>
+                                <span class="education__rounder"></span>
+                                <span class="education__line"></span>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="education__data">
+                            <div></div>
+                            <div>
+                                <span class="education__rounder"></span>
+                                <span class="education__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="education__title">Sekolah Menengah Kejuruan</h3>
+                                <span class="education__subtitle">SMK Wikrama Bogor</span>
+                                <div class="education__calendar">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2024 - 2027
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Content 2 -->
+                    <div class="education__content" data-content id="course">
+                        <div class="education__data">
+                            <div>
+                                <h3 class="education__title">Belajar Dasar AI</h3>
+                                <span class="education__subtitle">Dicoding Indonesia</span>
+                                <div class="education__calendar">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2026
+                                </div>
+                            </div>
+                            <div>
+                                <span class="education__rounder"></span>
+                                <span class="education__line"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Gallery -->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Galeri Proyek</h2>
+            <span class="section__subtitle">Karya terbaru saya</span>
+
+            <div class="projects__container container grid">
+                <!-- Project 1 -->
+                <div class="projects__card">
+                    <img src="img/Screenshot 2026-04-05 134417.png" alt="Project 1" class="projects__img">
+                    <div class="projects__modal">
+                        <div>
+                            <span class="projects__subtitle">Web App</span>
+                            <h3 class="projects__title">E-Commerce Platform</h3>
+                            <p class="projects__description">Full-stack application menggunakan React, Node.js, dan MySQL</p>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fas fa-link"></i> Demo
+                            </a>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="projects__card">
+                    <img src="img/Screenshot 2026-04-05 134706.png" alt="Project 2" class="projects__img">
+                    <div class="projects__modal">
+                        <div>
+                            <span class="projects__subtitle">Dashboard</span>
+                            <h3 class="projects__title">Prada-Clone</h3>
+                            <p class="projects__description">Visualisasi marketplace seperti Prada</p>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fas fa-link"></i> Demo
+                            </a>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="projects__card">
+                    <img src="img/Screenshot (575).png" alt="Project 3" class="projects__img">
+                    <div class="projects__modal">
+                        <div>
+                            <span class="projects__subtitle">Frontend</span>
+                            <h3 class="projects__title">Portfolio Quantum</h3>
+                            <p class="projects__description">HTML, CSS, JS murni dengan animasi modern</p>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fas fa-link"></i> Demo
+                            </a>
+                            <a href="#" class="projects__button button button--small">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Hubungi Saya</h2>
+            <span class="section__subtitle">Tertarik untuk bekerja sama?</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Telepon</h3>
+                            <span class="contact__subtitle">+62 812-3456-7890</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">emailanda@example.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Lokasi</h3>
+                            <span class="contact__subtitle">Bogor, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact__form grid" id="contact-form">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="contact-name" class="contact__label">Nama</label>
+                            <input type="text" id="contact-name" name="name" class="contact__input" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="contact-email" class="contact__label">Email</label>
+                            <input type="email" id="contact-email" name="email" class="contact__input" required>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="contact-subject" class="contact__label">Subjek</label>
+                        <input type="text" id="contact-subject" name="subject" class="contact__input" required>
+                    </div>
+                    <div class="contact__content">
+                        <label for="contact-message" class="contact__label">Pesan</label>
+                        <textarea name="message" id="contact-message" cols="0" rows="7" class="contact__input" required></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="button button--flex">
+                            Kirim Pesan <i class="fas fa-paper-plane button__icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h2 class="footer__title">Muhamad Maulana</h2>
+                    <span class="footer__subtitle">Web Developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#about" class="footer__link">Tentang</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Proyek</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Kontak</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/username" target="_blank" class="footer__social">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="footer__social">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/username" target="_blank" class="footer__social">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="footer__copy">&#169; 2025 Muhamad Maulana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
