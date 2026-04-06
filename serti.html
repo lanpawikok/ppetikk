@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat | Portofolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variabel CSS sama dengan style.css utama */
+        :root {
+            --hue-color: 230;
+            --first-color: hsl(var(--hue-color), 69%, 61%);
+            --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+            --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+            --title-color: hsl(var(--hue-color), 8%, 15%);
+            --text-color: hsl(var(--hue-color), 8%, 45%);
+            --text-color-light: hsl(var(--hue-color), 8%, 65%);
+            --body-color: hsl(var(--hue-color), 60%, 99%);
+            --container-color: #fff;
+            --header-height: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--body-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: var(--body-color);
+            box-shadow: 0 1px 4px rgba(0,0,0,.1);
+        }
+
+        .nav {
+            max-width: 968px;
+            height: var(--header-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav__logo {
+            color: var(--title-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav__logo:hover {
+            color: var(--first-color);
+        }
+
+        .nav__menu {
+            display: flex;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav__link {
+            color: var(--title-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: .3s;
+        }
+
+        .nav__link:hover,
+        .nav__link.active {
+            color: var(--first-color);
+        }
+
+        /* Main Content */
+        .main {
+            padding-top: calc(var(--header-height) + 2rem);
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section__title {
+            font-size: 2rem;
+            color: var(--title-color);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .section__subtitle {
+            display: block;
+            text-align: center;
+            color: var(--text-color-light);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Grid Sertifikat 3x3 */
+        .sertifikat__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .sertifikat__card {
+            background: var(--container-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .sertifikat__card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+
+        .sertifikat__img-container {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .sertifikat__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .sertifikat__card:hover .sertifikat__img {
+            transform: scale(1.1);
+        }
+
+        .sertifikat__badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--first-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .sertifikat__content {
+            padding: 1.5rem;
+        }
+
+        .sertifikat__title {
+            font-size: 1.1rem;
+            color: var(--title-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .sertifikat__issuer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--first-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .sertifikat__date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-color-light);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .sertifikat__desc {
+            font-size: 0.85rem;
+            color: var(--text-color);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .sertifikat__skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .sertifikat__skill-tag {
+            background: var(--first-color-lighter);
+            color: var(--first-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .sertifikat__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .sertifikat__id {
+            font-size: 0.75rem;
+            color: var(--text-color-light);
+        }
+
+        .sertifikat__verify {
+            color: var(--first-color);
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 500;
+        }
+
+        .sertifikat__verify:hover {
+            color: var(--first-color-alt);
+        }
+
+        /* Modal Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal__content {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal__close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--title-color);
+            cursor: pointer;
+            z-index: 10;
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .modal__img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #f5f5f5;
+        }
+
+        .modal__info {
+            padding: 2rem;
+        }
+
+        .modal__title {
+            font-size: 1.5rem;
+            color: var(--title-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 968px) {
+            .sertifikat__container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 568px) {
+            .sertifikat__container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav__menu {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--body-color);
+                padding: 1rem;
+                box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
+            }
+            
+            .nav__list {
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat__card {
+            background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .stat__number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat__label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+            
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Beranda</a></li>
+                    <li><a href="index.html#about" class="nav__link">Tentang</a></li>
+                    <li><a href="serti.html" class="nav__link active">Pengalaman</a></li>
+                    <li><a href="index.html#contact" class="nav__link">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="section__title">Sertifikat & Pengalaman</h1>
+            <span class="section__subtitle">Dokumentasi kompetensi dan pencapaian profesional</span>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat__card">
+                    <span class="stat__number">5</span>
+                    <span class="stat__label">Sertifikat</span>
+                </div>
+                <div class="stat__card">
+                    <span class="stat__number">150+</span>
+                    <span class="stat__label">Jam Belajar</span>
+                </div>
+                <div class="stat__card">
+                    <span class="stat__number">4</span>
+                    <span class="stat__label">Platform</span>
+                </div>
+                <div class="stat__card">
+                    <span class="stat__number">2023</span>
+                    <span class="stat__label">Mulai Belajar</span>
+                </div>
+            </div>
+
+            <!-- Grid Sertifikat 3x3 -->
+            <div class="sertifikat__container">
+
+                <!-- Sertifikat 1 -->
+                <div class="sertifikat__card" onclick="openModal(0)">
+                    <div class="sertifikat__img-container">
+                        <img src="img/Screenshot 2026-04-06 104440.png"alt="AI" class="sertifikat__img" onerror="this.src='https://via.placeholder.com/400x300/4f46e5/ffffff?text=Web+Development'">
+                        <span class="sertifikat__badge">Kompeten</span>
+                    </div>
+                    <div class="sertifikat__content">
+                        <h3 class="sertifikat__title">Belajar Dasar AI</h3>
+                        <div class="sertifikat__issuer">
+                            <i class="fas fa-award"></i> Dicoding Indonesia
+                        </div>
+                        <div class="sertifikat__date">
+                            <i class="far fa-calendar"></i> Januari 2026
+                        </div>
+                        <p class="sertifikat__desc">
+                            Mempelajari tentang dasar dasar AI
+                        </p>
+                        <div class="sertifikat__skills">
+                            <span class="sertifikat__skill-tag">PYTHON</span>
+                        </div>
+                        <div class="sertifikat__footer">
+                            <span class="sertifikat__id">ID: DIC-2024-001</span>
+                            <a href="https://www.dicoding.com/certificates/NVP7J05GOXR0" class="sertifikat__verify" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i> Verifikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div class="sertifikat__card" onclick="openModal(1)">
+                    <div class="sertifikat__img-container">
+                        <img src="img/Screenshot 2026-04-06 105539.png  " alt="JavaScript" class="sertifikat__img" onerror="this.src='https://via.placeholder.com/400x300/f59e0b/ffffff?text=JavaScript'">
+                        <span class="sertifikat__badge">Advanced</span>
+                    </div>
+                    <div class="sertifikat__content">
+                        <h3 class="sertifikat__title">Belajar Dasar Pemrograman JavaScript</h3>
+                        <div class="sertifikat__issuer">
+                            <i class="fas fa-award"></i> Dicoding Indonesia
+                        </div>
+                        <div class="sertifikat__date">
+                            <i class="far fa-calendar"></i> Januari 2025
+                        </div>
+                        <p class="sertifikat__desc">
+                            Menguasai algoritma, struktur data, dan pemrograman fungsional dengan JavaScript modern (ES6+)
+                        </p>
+                        <div class="sertifikat__skills">
+                            <span class="sertifikat__skill-tag">ES6+</span>
+                            <span class="sertifikat__skill-tag">Algorithm</span>
+                            <span class="sertifikat__skill-tag">OOP</span>
+                        </div>
+                        <div class="sertifikat__footer">
+                            <span class="sertifikat__id">ID: FCC-JS-2025</span>
+                            <a href="https://www.dicoding.com/certificates/4EXGVYONEXRL" class="sertifikat__verify" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i> Verifikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 3 -->
+                <div class="sertifikat__card" onclick="openModal(2)">
+                    <div class="sertifikat__img-container">
+                        <img src="img/Screenshot 2026-04-06 110827.png" alt="HTML" class="sertifikat__img" onerror="this.src='https://via.placeholder.com/400x300/61dafb/000000?text=React.js'">
+                        <span class="sertifikat__badge">Intermediate</span>
+                    </div>
+                    <div class="sertifikat__content">
+                        <h3 class="sertifikat__title">Belajar Dasar Pemrograman Web</h3>
+                        <div class="sertifikat__issuer">
+                            <i class="fas fa-award"></i> 
+                        </div>
+                        <div class="sertifikat__date">
+                            <i class="far fa-calendar"></i> Oktober 2024
+                        </div>
+                        <p class="sertifikat__desc">
+                            Membangun web single-page dengan HTML,CSS.
+                        </p>
+                        <div class="sertifikat__skills">
+                            <span class="sertifikat__skill-tag">HTML</span>
+                            <span class="sertifikat__skill-tag">CSS</span>
+                        </div>
+                        <div class="sertifikat__footer">
+                            <span class="sertifikat__id">ID: DICODING-HTML-24</span>
+                            <a href="https://www.dicoding.com/certificates/NVP748KQOPR0" class="sertifikat__verify" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i> Verifikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 4 -->
+                <div class="sertifikat__card" onclick="openModal(3)">
+                    <div class="sertifikat__img-container">
+                        <img src="img/Screenshot 2026-04-06 111301.png" alt="Python" class="sertifikat__img" onerror="this.src='https://via.placeholder.com/400x300/3776ab/ffffff?text=Python'">
+                        <span class="sertifikat__badge">Kompeten</span>
+                    </div>
+                    <div class="sertifikat__content">
+                        <h3 class="sertifikat__title">BLACKHOLE CODE</h3>
+                        <div class="sertifikat__issuer">
+                            <i class="fas fa-award"></i> acode
+                        </div>
+                        <div class="sertifikat__date">
+                            <i class="far fa-calendar"></i> Desember 2025
+                        </div>
+                        <p class="sertifikat__desc">
+                            Membuat Visualisasi Black Hole menggunakan react,js
+                        </p>
+                        <div class="sertifikat__skills">
+                            <span class="sertifikat__skill-tag">React</span>
+                            <span class="sertifikat__skill-tag">JS</span>
+                        </div>
+                        <div class="sertifikat__footer">
+                            <span class="sertifikat__id">ID: ACODE-BH-25</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 5 -->
+                <div class="sertifikat__card" onclick="openModal(4)">
+                    <div class="sertifikat__img-container">
+                        <img src="img/Screenshot 2026-04-06 112532.png" alt="Database" class="sertifikat__img" onerror="this.src='https://via.placeholder.com/400x300/00758f/ffffff?text=MySQL'">
+                        <span class="sertifikat__badge">Professional</span>
+                    </div>
+                    <div class="sertifikat__content">
+                        <h3 class="sertifikat__title">Keselamatan Kerja</h3>
+                        <div class="sertifikat__issuer">
+                            <i class="fas fa-award"></i> International Labour Organization
+                        </div>
+                        <div class="sertifikat__date">
+                            <i class="far fa-calendar"></i> Agustus 2024
+                        </div>
+                        <p class="sertifikat__desc">
+                            Belajar tentang Keselamatan dalam Bekerja
+                        </p>
+                        <div class="sertifikat__footer">
+                            <span class="sertifikat__id">ID: ILO-KK-2024</span>
+                            <a href="https://drive.google.com/file/d/1ytVW6gSBZW-9d_xrHqqsGE1IUepo58C3/view?usp=sharing" class="sertifikat__verify" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i> Verifikasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <!-- Modal Lightbox -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <img src="" alt="Sertifikat Preview" class="modal__img" id="modal-img">
+            <div class="modal__info" id="modal-info">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data sertifikat untuk modal
+        const sertifikatData = [
+            {
+                title: "Belajar Dasar Pemrograman Web",
+                issuer: "Dicoding Indonesia",
+                date: "Januari 2026",
+                desc: "Sertifikasi kompetensi Dasar AI",
+                skills: ["PYTHON",],
+                credential: "DICODING-2026-001"
+            },
+            {
+                title: "Belajar Dasar Pemrograman JavaScript",
+                issuer: "Dicoding Indonesia",
+                date: "Januari 2025",
+                desc: "300+ jam belajar algoritma pemrograman, struktur data (stack, queue, tree, graph), OOP, functional programming, dan regex. 5 proyek sertifikasi terselesaikan.",
+                skills: ["ES6+", "Algorithm", "Data Structure", "OOP", "Functional Programming"],
+                credential: "DICODING-JS-2024"
+            },
+            {
+                title: "Belajar Dasar Pemrograman Web",
+                issuer: "Dicoding Indonesia",
+                date: "Oktober 2024",
+                desc: "48 jam video learning mencakup pengembangan website menggunakan html dan css",
+                skills: ["HTML", "CSS"],
+                credential: "DICODING-HTML-24"
+            },
+            {
+                title: "Python for Data Science",
+                issuer: "Coursera (IBM)",
+                date: "Februari 2024",
+                desc: "Black Hole Visual",
+                skills: ["React", "JS"],
+                credential: "acode"
+            },
+            {
+                title: "Keselamatan KeraL",
+                issuer: "International Labour Organization",
+                date: "Agustus 2024",
+                desc: "Mempelajari tentang bagaimana cara cara keselamatan kerja",
+                skills: ["Keselamatan Kerja"],
+                credential: "ILO-KK-2024"
+            },
+        ];
+
+        function openModal(index) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalInfo = document.getElementById('modal-info');
+            const data = sertifikatData[index];
+            
+            // Set image (gunakan placeholder jika tidak ada gambar)
+            const cardImg = document.querySelectorAll('.sertifikat__img')[index];
+            modalImg.src = cardImg.src;
+            
+            // Set info
+            modalInfo.innerHTML = `
+                <h2 class="modal__title">${data.title}</h2>
+                <div style="display: flex; gap: 2rem; margin-bottom: 1rem; color: var(--text-color);">
+                    <span><i class="fas fa-building"></i> ${data.issuer}</span>
+                    <span><i class="far fa-calendar"></i> ${data.date}</span>
+                </div>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8;">${data.desc}</p>
+                <div style="margin-bottom: 1rem;">
+                    <strong>Skills:</strong>
+                    <div class="sertifikat__skills" style="margin-top: 0.5rem;">
+                        ${data.skills.map(skill => `<span class="sertifikat__skill-tag">${skill}</span>`).join('')}
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                    <span style="color: var(--text-color-light); font-size: 0.9rem;">
+                        <i class="fas fa-id-card"></i> Credential ID: ${data.credential}
+                    </span>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
